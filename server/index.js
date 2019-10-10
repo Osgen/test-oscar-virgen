@@ -8,7 +8,5 @@ const app = express();
 app.use(express.json());
 storeRoutes(app);//send express app to function storeRoutes
 
-
-
-app.listen(PORT);
+app.listen(PORT, ()=>{console.log(`API RUNNING AT ${PORT}`)});//Express listening to X port
   
