@@ -1,0 +1,22 @@
+{
+  "name": "test-oscar-virgen",
+  "version": "1.0.0",
+  "description": "API test of store",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Osgen/test-oscar-virgen.git"
+  },
+  "author": "Oscar Virgen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Osgen/test-oscar-virgen/issues"
+  },
+  "homepage": "https://github.com/Osgen/test-oscar-virgen#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
