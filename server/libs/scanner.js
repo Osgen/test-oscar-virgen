@@ -5,7 +5,11 @@ let getTotal = (itemsToScan)=>{//Gets the total for checkout
     [prices, amountPerItem, total] = scanItems(itemsToScan);//Use REST deconstruct to get each element
 
     Object.entries(amountPerItem).forEach(item => {
-        total -= promotions[item[0]](item[1], prices[item[0]]);//Deduct from total the discount per item code
+        let code  = item[0];//Code of item
+        let amount = item[1];//Amount of each item
+        if(typeof(promotions[code]) === 'function'){//If promotion of item exists
+            total -= promotions[code](amount, prices[code]);//Deduct from total the discount per item code
+        }
     });
     return total;
 }
