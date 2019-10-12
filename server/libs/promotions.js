@@ -9,8 +9,5 @@ module.exports = {
     },
     PANTS:(amount, price, ...trash)=>{
         return (Math.floor(amount/2)) * price;//Gets the discount and price for PANTS
-    },
-    HAT:(...trash)=>{//No promotion applied
-        return 0;
     }
 }
