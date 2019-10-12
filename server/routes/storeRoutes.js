@@ -8,9 +8,9 @@ module.exports = (app)=>{//get express app as parameter and send module as a fun
         res.json(items);
     });
 
-    app.get('/store/checkout/', function(req, res){//sets checkout for store and manages  discounts and promotions
-        let itemsToScan = req.body; //Gets items that need to be scanned
-
+    app.post('/store/checkout/', function(req, res){//sets checkout for store and manages  discounts and promotions
+        let itemsToScan = req.body.data; //Gets items that need to be scanned
+        console.log(req.body);
         res.json({"total":scanner.getTotal(itemsToScan)});//returns total
     });
 
